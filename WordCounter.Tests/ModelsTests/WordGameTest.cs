@@ -50,11 +50,20 @@ namespace WordCounter.Tests
        Assert.AreEqual(result, 1);
      }
 
+     [TestMethod]
+     public void CountMatch_NumberOfMatch_2()
+     {
+       //Arrange
+       string input1 = "cat";
+       string input2 = "The cat is grey. She is my cat";
 
+       //Act
+       RepeatCounter newInput = new RepeatCounter(input1, input2);
+       int result = newInput.Counter();
 
-
-
-  }
-
+       //Assert
+       Assert.AreEqual(2, result);
+     }
+   }
 
   }
