@@ -3,67 +3,71 @@ using WordCounter.Models;
 
 namespace WordCounter.Tests
 {
-  [TestClass]
-  public class RepeatCounterTests
-  {
+    [TestClass]
+    public class RepeatCounterTests
+    {
 
-     // [TestMethod]
-     // public void GetLetter_ReturnsLetter_String()
-     // {
-     //   //Arrange
-     //   string input1 = "a";
-     //   RepeatCounter newInput = new RepeatCounter(input1);
-     //
-     //   //Act
-     //   string result = newInput.GetLetter();
-     //   //Assert
-     //   Assert.AreEqual(letter, result);
-     // }
+        [TestMethod]
+        public void GetInput_ReturnsInput_true()
+        {
+          //Arrange
 
-     [TestMethod]
+          RepeatCounter newInput = new RepeatCounter("a","a");
+
+          //Act
+          string input1 = newInput.GetLetter();
+          string sentence = newInput.GetSentence();
+          //Assert
+          Assert.AreEqual("a", input1);
+          Assert.AreEqual("a", sentence);
+
+        }
+
+      
+
+    [TestMethod]
      public void MatchLetter_LetterEqual_1()
      {
-       //Arrange
-       string input1 = "a";
-       string input2 = "a";
+      //Arrange
+      string input1 = "a";
+      string sentence = "a";
 
        //Act
-       RepeatCounter newInput = new RepeatCounter(input1, input2);
+       RepeatCounter newInput = new RepeatCounter(input1, sentence);
        int result = newInput.Counter();
 
        //Assert
        Assert.AreEqual(result, 1);
-     }
+      }
 
-     [TestMethod]
-     public void MatchWord_WordEqual_1()
-     {
-       //Arrange
-       string input1 = "cat";
-       string input2 = "cat";
+    [TestMethod]
+    public void MatchWord_WordEqual_1()
+    {
+      //Arrange
+      string input1 = "cat";
+      string sentence = "cat";
 
-       //Act
-       RepeatCounter newInput = new RepeatCounter(input1, input2);
-       int result = newInput.Counter();
+      //Act
+      RepeatCounter newInput = new RepeatCounter(input1, sentence);
+      int result = newInput.Counter();
 
-       //Assert
-       Assert.AreEqual(result, 1);
-     }
+      //Assert
+      Assert.AreEqual(result, 1);
+    }
 
-     [TestMethod]
-     public void CountMatch_NumberOfMatch_2()
-     {
-       //Arrange
-       string input1 = "cat";
-       string input2 = "The cat is grey. She is my cat";
+      [TestMethod]
+      public void CountMatch_NumberOfMatch_2()
+      {
+        //Arrange
+        string input1 = "cat";
+        string sentence = "The cat is grey. She is my cat";
 
-       //Act
-       RepeatCounter newInput = new RepeatCounter(input1, input2);
-       int result = newInput.Counter();
+        //Act
+        RepeatCounter newInput = new RepeatCounter(input1, sentence);
+        int result = newInput.Counter();
 
-       //Assert
-       Assert.AreEqual(2, result);
-     }
+        //Assert
+        Assert.AreEqual(2, result);
+      }
    }
-
-  }
+}
