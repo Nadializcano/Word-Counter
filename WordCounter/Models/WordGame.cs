@@ -1,4 +1,4 @@
-using System:
+using System;
 using System.Collections.Generic;
 
 namespace WordCounter.Models
@@ -12,6 +12,7 @@ namespace WordCounter.Models
     public RepeatCounter (string letter, string sentence)
     {
       _letter = letter;
+      _sentence = sentence;
     }
 
     public string GetLetter()
@@ -21,15 +22,21 @@ namespace WordCounter.Models
 
     public int Counter()
     {
+      int count = 0;
+
       string newLetter = _letter.ToLower();
-      string newSentence = _sentece.ToLower();
+      string newSentence = _sentence.ToLower();
       string[] sentenceSplit = newSentence.Split();
 
-      foreach (string sentence in sentenceSplit)
+      foreach (string sentenceLetter in sentenceSplit)
       {
-        if (newLetter == sentence)
+        if (newLetter == sentenceLetter)
         {
           count+=1;
+        }
+        else
+        {
+          count+= 0;
         }
       }
       return count;
