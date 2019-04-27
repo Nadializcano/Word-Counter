@@ -7,18 +7,39 @@ namespace WordCounter.Tests
   public class RepeatCounterTests
   {
 
-    [TestMethod]
-    public void GetLetter_ReturnsLetter_String()
-    {
-      //Arrange
-      string letter = "a";
-      RepeatCounter newWord = new RepeatCounter(letter);
+     [TestMethod]
+     public void GetLetter_ReturnsLetter_String()
+     {
+       //Arrange
+       string input1 = "a";
+       RepeatCounter newInput = new RepeatCounter(letter);
 
-      //Act
-      string result = newWord.GetLetter();
-      Assert.AreEqual(letter, result);
-    }
+       //Act
+       string result = newInput.GetLetter();
+       //Assert
+       Assert.AreEqual(letter, result);
+     }
+
+     [TestMethod]
+     public void MatchLetter_LetterEqual_1()
+     {
+       //Arrange
+       string input1 = "a";
+       string input2 = "a";
+
+       //Act
+       RepeatCounter newInput = new RepeatCounter(input1, input2);
+       int result = newInput.Counter();
+
+       //Assert
+       Assert.AreEqual(result, 1);
+     }
+
+
+
 
 
   }
-}
+
+
+  }
