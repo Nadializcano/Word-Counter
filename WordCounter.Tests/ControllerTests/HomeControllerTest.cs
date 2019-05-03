@@ -1,25 +1,21 @@
-// using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using Microsoft.AspNetCore.Mvc;
-// using System.Collections.Generic;
-// using WordCounter.Controllers;
-// using WordCounter.Models;
-//
-// namespace WordCounter.Tests
-// {
-//     [TestClass]
-//     public class HomeControllerTest
-//     {
-//       [TestMethod]
-//       public void Index_ReturnsCorrectView_True()
-//       {
-//         //Arrange
-//         HomeController controller = new HomeController();
-//
-//         //Action
-//         ActionResult indexView = controller.Index();
-//
-//         //Assert
-//         Assert.IsInstanceOfType(indexView, typeof(ViewResult));
-//       }
-//   }
-// }
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using WordCounter.Controllers;
+using WordCounter.Models;
+
+namespace WordCounter.Tests
+{
+  [TestClass]
+   public class HomeControllerTest
+    {
+
+    [TestMethod]
+    public void Index()
+    {
+      HomeController controller = new HomeController();
+      ActionResult indexView = controller.Index();
+      Assert.IsInstanceOfType(indexView, typeof(ViewResult));
+    }
+   }
+}
