@@ -22,3 +22,4 @@
 /Users/admin/Desktop/EpicodusC#/FridayProjects/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.Views.pdb
 /Users/admin/Desktop/EpicodusC#/FridayProjects/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.csproj.CopyComplete
 /Users/admin/Desktop/EpicodusC#/FridayProjects/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/Razor/Views/WordCounter/New.g.cshtml.cs
+/Users/admin/Desktop/EpicodusC#/FridayProjects/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/Razor/Views/WordCounter/Show.g.cshtml.cs
