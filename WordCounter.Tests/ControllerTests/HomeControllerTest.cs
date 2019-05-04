@@ -8,7 +8,7 @@ namespace WordCounter.Tests
 {
   [TestClass]
    public class HomeControllerTest
-    {
+   {
 
     [TestMethod]
     public void Index_ReturnsCorrectView_True()
@@ -17,6 +17,5 @@ namespace WordCounter.Tests
       ActionResult indexView = controller.Index();
       Assert.IsInstanceOfType(indexView, typeof(ViewResult));
     }
-
    }
 }

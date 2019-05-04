@@ -3,11 +3,9 @@ using System.Collections.Generic;
 
 namespace WordCounter.Models
 
-
 {
    public class RepeatCounter
    {
-
      private string _input1;
      private string _sentence;
 
@@ -27,8 +25,6 @@ namespace WordCounter.Models
        return _sentence;
      }
 
-
-
       public int Counter()
       {
         int count = 0;
@@ -43,13 +39,8 @@ namespace WordCounter.Models
           {
             count+=1;
           }
-
         }
         return count;
-      }
-      
-
-}
-
-
+      }    
+    }
 }
